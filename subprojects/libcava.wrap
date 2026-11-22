@@ -1,0 +1,9 @@
+# Archive form, not wrap-git: meson cannot clone in a sandbox without network access.
+# nix/default.nix prefetches the same revision into `directory`; keep both pins in sync.
+[wrap-file]
+directory = cava-8d6e963db9cd29c2b3b5a5df1e46bb65c410f9cc
+source_url = https://github.com/LukashonakV/cava/archive/8d6e963db9cd29c2b3b5a5df1e46bb65c410f9cc.tar.gz
+source_filename = cava-8d6e963db9cd29c2b3b5a5df1e46bb65c410f9cc.tar.gz
+source_hash = 956d69bd041050e21f633df53727e5a83887a7e7e4d5a977fc4085429594efa7
+[provide]
+libcava = cava_dep

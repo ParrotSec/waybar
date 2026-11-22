@@ -1,0 +1,35 @@
+# vim: ft=Dockerfile
+
+FROM gentoo/stage3:latest
+
+RUN export FEATURES="-ipc-sandbox -network-sandbox -pid-sandbox -sandbox -usersandbox" && \
+    emerge-webrsync && \
+    eselect news read --quiet new 1>/dev/null 2>&1 && \
+    USE="X harfbuzz wayland pulseaudio" emerge --verbose --update --deep --with-bdeps=y --backtrack=30 --newuse @world && \
+    USE="X harfbuzz" emerge \
+        dev-build/meson \
+        dev-vcs/git && \
+    USE="X harfbuzz wayland pulseaudio" emerge \
+        app-text/doxygen \
+        dev-cpp/glibmm:2 \
+        dev-cpp/gtkmm:3.0 \
+        dev-cpp/gtkmm:4.0 \
+        dev-libs/iniparser \
+        dev-libs/libevdev \
+        dev-libs/libinput \
+        dev-libs/libnl \
+        dev-libs/wayland \
+        dev-libs/wayland-protocols \
+        gui-libs/gtk-layer-shell \
+        gui-libs/gtk4-layer-shell \
+        media-libs/libmpdclient \
+        media-libs/libpulse \
+        media-sound/jack2 \
+        media-sound/playerctl \
+        media-sound/sndio \
+        media-video/pipewire \
+        net-misc/modemmanager \
+        sci-geosciences/gpsd \
+        sci-libs/fftw \
+        sys-power/upower && \
+    USE="gtk3" emerge dev-libs/libdbusmenu
