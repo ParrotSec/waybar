@@ -1,0 +1,3 @@
+tar-ignore = debian/changelog.dch
+tar-ignore = .*.swp
+tar-ignore = *~

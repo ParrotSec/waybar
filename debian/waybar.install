@@ -1,0 +1,2 @@
+resources/custom_modules/mediaplayer.py /usr/share/waybar/custom_modules/
+resources/custom_modules/power_menu.xml /usr/share/waybar/custom_modules/

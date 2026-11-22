@@ -1,0 +1,66 @@
+Source: waybar
+Section: x11
+Priority: optional
+Maintainer: Parrot Dev Team <team@parrotsec.org>
+Uploaders: Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ libdbusmenu-gtk3-dev,
+ libevdev-dev,
+ libfmt-dev (>= 8.1.1),
+ libglibmm-2.4-dev,
+ libgps-dev,
+ libgtk-layer-shell-dev (>= 0.9.0),
+ libgtkmm-3.0-dev,
+ libhowardhinnant-date-dev,
+ libinput-dev,
+ libjack-jackd2-dev,
+ libjsoncpp-dev,
+ libmm-glib-dev,
+ libmpdclient-dev,
+ libnl-3-dev,
+ libnl-genl-3-dev,
+ libpipewire-0.3-dev,
+ libplayerctl-dev,
+ libpulse-dev,
+ libsigc++-2.0-dev,
+ libsndio-dev,
+ libspdlog-dev (>= 1.15.2),
+ libudev-dev,
+ libupower-glib-dev,
+ libwayland-dev,
+ libwireplumber-0.5-dev,
+ libxkbregistry-dev,
+ wayland-protocols (>= 1.45),
+ meson,
+ pkgconf,
+ scdoc (>= 1.9.2),
+ systemd-dev,
+Standards-Version: 4.7.2
+Rules-Requires-Root: no
+Homepage: https://github.com/Alexays/Waybar/
+Vcs-Browser: https://gitlab.com/parrotsec/packages/waybar
+Vcs-Git: https://gitlab.com/parrotsec/packages/waybar.git
+
+Package: waybar
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Suggests:
+ fonts-font-awesome,
+ gir1.2-playerctl-2.0,
+ libayatana-appindicator3-1,
+ python3:any,
+Description: highly customizable Wayland bar for Sway and wlroots based compositors
+ Waybar is a highly customizable Wayland bar for Sway and wlroots based
+ compositors. It provides applets displaying information about the compositor
+ (workspaces, binding mode, focused window name), the system (clock, battery,
+ network, sound volume, memory, CPU load, disk usage, backlight, temperature)
+ and many other sources through built-in modules and custom scripts.
+ .
+ Configuration is a JSONC file with CSS styling, both user-editable, so the bar
+ can be adapted to any desktop layout. The package includes the Sway,
+ Hyprland, River, dwl, Niri, Mango and Umbriel workspace modules, the tray,
+ MPRIS, MPD, PulseAudio, PipeWire, WirePlumber, JACK, sndio, UPower, libinput,
+ evdev, RFKILL, WWAN, GPS and logind integrations.

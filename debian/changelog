@@ -1,0 +1,16 @@
+waybar (0.16.0-0parrot1) echo; urgency=medium
+
+  * Initial release for Parrot 0.16.0.
+  * Add libmm-glib-dev and libglibmm-2.4-dev for the new WWAN module and
+    the now mandatory GIO dependency, plus libevdev-dev, libpipewire-
+    0.3-dev and libudev-dev that were only found transitively.
+  * Require wayland-protocols >= 1.45: staging/ext-background-effect is
+    only shipped from that release on, while the build system looks for
+    it whenever wayland-protocols >= 1.41 is detected.
+  * Enable the gps loadable module and the niri, mango and umbriel
+    workspace modules; disable cava because libcava >= 1.0.0 is not
+    packaged.
+  * Keep the default configuration and stylesheet in /etc/xdg/waybar as
+    conffiles, as previous versions did.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Sun, 22 Nov 2026 11:29:39 +0100

@@ -1,0 +1,30 @@
+From 702f6ef03fbb8b34a89a74550fb2a2e7bcf89674 Mon Sep 17 00:00:00 2001
+From: Birger Schacht <birger@debian.org>
+Date: Tue, 31 Dec 2024 17:24:19 +0100
+Subject: [PATCH] fix: patch paths for Debian shipped custom modules
+
+---
+ resources/config.jsonc | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+Index: waybar-0.16.0/resources/config.jsonc
+===================================================================
+--- waybar-0.16.0.orig/resources/config.jsonc
++++ waybar-0.16.0/resources/config.jsonc
+@@ -223,14 +223,14 @@
+             "default": "🎜"
+         },
+         "escape": true,
+-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
++        "exec": "/usr/share/waybar/custom_modules/mediaplayer.py 2> /dev/null" // Script in resources folder
+         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+     },
+     "custom/power": {
+         "format" : "⏻ ",
+ 		"tooltip": false,
+ 		"menu": "on-click",
+-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
++		"menu-file": "/usr/share/waybar/custom_modules/power_menu.xml", // Menu file in resources folder
+ 		"menu-actions": {
+ 			"shutdown": "shutdown",
+ 			"reboot": "reboot",

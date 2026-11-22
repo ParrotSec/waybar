@@ -1,0 +1,3 @@
+remove-on-upgrade /etc/xdg/waybar/config
+/etc/xdg/waybar/config.jsonc
+/etc/xdg/waybar/style.css
