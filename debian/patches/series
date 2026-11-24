@@ -1,2 +1,3 @@
 0001-use-system-wide-paths-for-bundled-custom-modules.patch
 0002-move-default-config-to-usr-share.patch
+0003-parrot-default-config.patch

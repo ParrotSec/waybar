@@ -1,3 +1,10 @@
+waybar (0.16.0-0parrot3) echo; urgency=medium
+
+  * Ship the Parrot panel configuration and stylesheet as the packaged
+    fallback defaults.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Tue, 24 Nov 2026 12:02:44 +0100
+
 waybar (0.16.0-0parrot2) echo; urgency=medium
 
   * Install default config.jsonc and style.css under /usr/share/waybar,
