@@ -16,3 +16,6 @@ override_dh_auto_configure:
 		-Drfkill=enabled
 
 override_dh_auto_test:
+
+override_dh_installsystemduser:
+	dh_installsystemduser --no-enable

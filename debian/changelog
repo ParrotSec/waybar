@@ -1,3 +1,10 @@
+waybar (0.16.0-0parrot4) echo; urgency=medium
+
+  * Do not enable waybar.service from the package postinst; Parrot
+    Hyprland starts the panel from its configuration.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Tue, 24 Nov 2026 16:39:52 +0100
+
 waybar (0.16.0-0parrot3) echo; urgency=medium
 
   * Ship the Parrot panel configuration and stylesheet as the packaged
